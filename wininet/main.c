@@ -1,22 +1,20 @@
-#include <iostream>
+#include <stdio.h>
 #include <windows.h>
 #include <wininet.h>
 
 #pragma comment (lib, "wininet.lib")
 
-using namespace std;
-
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	HINSTANCE hOpen, hConnect;
-	hOpen = InternetOpen("ftp.chobi.net", NULL , NULL, "ftp://sg982zc.chobi.net" , 0);
+	HINTERNET hOpen, hConnect;
+	hOpen = InternetOpen("ftptest", INTERNET_OPEN_TYPE_DIRECT, NULL,NULL,0);
 	if(hOpen!=NULL)
 	{
-		cout << "ok." << endl;
+		printf("開けました。\n");
 	}
 	else
 	{
-		cout << "ng." << endl;
+		printf("error.\n");
 	}
 	
 	
