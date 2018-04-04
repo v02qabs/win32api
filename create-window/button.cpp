@@ -1,8 +1,10 @@
 #include<windows.h>
 #include<stdlib.h>
 
-
 LRESULT CALLBACK WndProc(HWND hwnd , UINT msg , WPARAM wp , LPARAM lp) {
+
+//static HWND OKB;
+static HINSTANCE hInstance;
 	switch (msg) {
 	case WM_DESTROY:
 		exit(0);
@@ -36,6 +38,8 @@ int WINAPI WinMain(HINSTANCE hInstance , HINSTANCE hPrevInstance ,
 			100 , 100 , 200 , 200 , NULL , NULL ,
 			hInstance , NULL
 	);
+
+	CreateWindow(TEXT("BUTTON"),TEXT("OK"), WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON, 0,0,100,30, hwnd,NULL, hInstance, NULL);
 
 	if (hwnd == NULL) return 0;
 
