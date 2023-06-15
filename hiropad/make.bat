@@ -1,0 +1,1 @@
+gcc hiropad.c -o hiropad.exe -mwindows

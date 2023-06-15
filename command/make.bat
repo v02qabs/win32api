@@ -1,0 +1,1 @@
+gcc whereis.c -o ./bin/whereis.exe -mwindows
