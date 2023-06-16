@@ -22,12 +22,12 @@ int main(int args, char *argv[])
 {
 	char *command = argv[1];
 	char commands[300];
+	system("z:\\root\\mingw-setup.bat");
 	system("echo %path% > path.txt");
 	sprintf(commands , "dir 3/s c:/*%s*", command);
 	printf("%s\n" , commands);
 	FILE *fp = fopen("path.txt" , "r");
 	
-
 	char subject[500];
 	while(fgets(subject, sizeof(subject), fp) != NULL)
 	{
