@@ -7,6 +7,20 @@ LRESULT CALLBACK WndProc(HWND hwnd , UINT msg , WPARAM wp , LPARAM lp) {
 	case WM_DESTROY:
 		exit(0);
 		return 0;
+	case WM_COMMAND:
+		switch(LOWORD(wp))
+		{
+			case XBUTTON1:
+					MessageBox(hwnd, TEXT("BUTTON_ID1"), TEXT("ID_BUTTON_1"), MB_OK);
+					ShowWindow(hwnd, SW_HIDE);
+					
+					break;
+			case XBUTTON2:
+					MessageBox(hwnd, TEXT("BUTTON_ID2"), TEXT("BUTTON 2"), MB_OK);
+					break;
+		}
+		return 0;
+		
 	}
 	return DefWindowProc(hwnd , msg , wp , lp);
 }
@@ -44,8 +58,13 @@ int WINAPI WinMain(HINSTANCE hInstance , HINSTANCE hPrevInstance ,
 	
 	CreateWindow(TEXT("button") , TEXT("WRITE DIARY"),
 		WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON, 
-		0,0,100,30, hwnd, NULL, hInstance, NULL);
-		
+		0,0,100,30, hwnd, (HMENU)XBUTTON1, hInstance, NULL);
+
+	CreateWindow(TEXT("button") , TEXT("VIEW DIARY"),
+		WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON, 
+		0,35,100,30, hwnd, (HMENU)XBUTTON2, hInstance, NULL);
+
+
 	if (hwnd == NULL) return 0;
 
 	while (TRUE) {
