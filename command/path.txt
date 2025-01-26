@@ -1,1 +1,1 @@
-C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\system32\WindowsPowershell\v1.0;c:\git\cmd 
+c:\python3\Scripts\;c:\python3\;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\system32\WindowsPowershell\v1.0;c:\git\cmd;c:\7zip;c:\busybox\bin;c:\Program Files (x86)\Mono\bin;c:/mingw/mingw64/bin;c:\git\bin;c:\make1\bin;c:/python3/Scripts;c:/python3; 
