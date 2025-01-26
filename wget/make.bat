@@ -1,0 +1,1 @@
+g++ wget.cpp -o wget.exe -l urlmon
